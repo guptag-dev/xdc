@@ -17,17 +17,18 @@ public:
 	QHostAddress getInterface();
 
 	void setPort(qint16 p);
-	qint16 getPort();
+	quint16 getPort();
 
 public slots:
 	void start();
 
 protected slots:
 	void newConnection();
+	void couldNotBindError();
 
 private:
 	QHostAddress interface;
-	qint16 port;
+	quint16 port;
 
 	QTcpServer *sock;
 };

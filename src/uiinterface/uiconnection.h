@@ -6,9 +6,13 @@
 
 class UiConnection : public QObject
 {
+	Q_OBJECT
 public:
 	UiConnection(QTcpSocket* s);
 	~UiConnection();
+protected slots:
+	void readyRead();
+	void stateChanged(QAbstractSocket::SocketState);
 
 private:
 	QTcpSocket* conn;
