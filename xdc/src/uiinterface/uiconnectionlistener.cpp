@@ -1,5 +1,5 @@
-#include "uiconnectionlistener.h"
-#include "uiconnection.h"
+#include "uiinterface/uiconnectionlistener.h"
+#include "uiinterface/uiconnection.h"
 
 UiConnectionListener::UiConnectionListener() {
 	sock = new QTcpServer;

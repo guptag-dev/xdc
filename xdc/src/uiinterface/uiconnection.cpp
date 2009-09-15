@@ -1,7 +1,5 @@
-#include "uiconnection.h"
-#include "uiconnectionlist.h"
-
-#include "utils/dctokenparser.h"
+#include "uiinterface/uiconnection.h"
+#include "uiinterface/uiconnectionlist.h"
 
 #include <QByteArray>
 

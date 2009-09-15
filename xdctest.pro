@@ -1,20 +1,21 @@
 # -------------------------------------------------
-# xdc: main build config
+# xdc: test build config
 # -------------------------------------------------
 
 QT += network
+QT += testlib
 QT -= gui
 
-TARGET = xdc
+TARGET = xdctest
 CONFIG += console
 CONFIG -= app_bundle
 TEMPLATE = app
 
 # -------------------------------------------------
-# all files
+# all sources and headers from xdc main 
+# build, except xdc/src/main.cpp
 # -------------------------------------------------
 SOURCES += xdc/src/hubconnection.cpp \
-    xdc/src/main.cpp \
     xdc/src/xdcstartup.cpp \
     xdc/src/utils/dcutils.cpp \
     xdc/src/utils/dctokenparser.cpp \
@@ -42,9 +43,19 @@ HEADERS += xdc/include/xdcstartup.h \
 INCLUDEPATH += xdc/include/
 
 # -------------------------------------------------
+# sources from the test tree
+# -------------------------------------------------
+SOURCES += test/src/main.cpp \
+    test/src/uiinterface/uinlsmessagetest.cpp
+HEADERS += test/include/uiinterface/uinlsmessagetest.h
+
+INCLUDEPATH += test/include/
+
+# -------------------------------------------------
 # build paths
 # -------------------------------------------------
-OBJECTS_DIR = xdc/build/
-MOC_DIR = xdc/build/moc/
-DESTDIR = xdc/
+
+OBJECTS_DIR = test/build/
+MOC_DIR = test/build/moc/
+DESTDIR = test/
 

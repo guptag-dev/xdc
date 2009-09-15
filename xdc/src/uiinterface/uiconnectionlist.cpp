@@ -1,5 +1,5 @@
-#include "uiconnectionlist.h"
-#include "uiconnection.h"
+#include "uiinterface/uiconnectionlist.h"
+#include "uiinterface/uiconnection.h"
 
 UiConnectionList::UiConnectionList() {}
 

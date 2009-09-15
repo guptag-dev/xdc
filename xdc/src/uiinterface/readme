@@ -1,2 +1,2 @@
 this directory contains classes that listen for connections from a UI over TCP.
-It also manages access-control-lists to this daemon
+It also manages access-control-lists to this daemon.

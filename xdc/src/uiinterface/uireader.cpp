@@ -1,4 +1,4 @@
-#include "uireader.h"
+#include "uiinterface/uireader.h"
 
 UiReader::UiReader() {}
 

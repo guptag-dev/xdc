@@ -1,4 +1,4 @@
-#include "uinlsmessage.h"
+#include "uiinterface/uinlsmessage.h"
 
 #include <QBuffer>
 

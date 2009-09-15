@@ -1,5 +1,5 @@
-#include "dctokenparser.h"
-#include "rawstringutils.h"
+#include "utils/dctokenparser.h"
+#include "utils/rawstringutils.h"
 
 DCTokenParser::DCTokenParser(const char* str) {
 	len=RawStringUtils::strlen(str);

@@ -1,9 +1,12 @@
-#include "uimessage.h"
+#include "uiinterface/uimessage.h"
 
 UiMessage::UiMessage()
 	: state(NONE)
 {}
 
+UiMessage::MessageType UiMessage::getType() const {
+	return messageType;
+}
 QString UiMessage::getMessageId() const {
 	return messageId;
 }
@@ -13,10 +16,13 @@ QString UiMessage::getClientId() const {
 QString UiMessage::getCommand() const {
 	return command;
 }
-QStringList UiMessage::getCommandArgs() const {
+QStringList UiMessage::getArgs() const {
 	return commandArgs;
 }
-QString UiMessage::getCommandArgNumber(int n) const {
+int UiMessage::getArgsCount() const {
+	return commandArgs.size();
+}
+QString UiMessage::getArgNumber(int n) const {
 	// todo: check for index out of bound!
 	return commandArgs.at(n);
 }

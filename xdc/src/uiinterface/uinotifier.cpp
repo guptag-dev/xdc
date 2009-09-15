@@ -1,4 +1,4 @@
-#include "uinotifier.h"
+#include "uiinterface/uinotifier.h"
 
 UiNotifier::UiNotifier() {}
 

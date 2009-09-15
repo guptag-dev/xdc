@@ -10,11 +10,13 @@ public:
 	UiMessage();
 	enum MessageType { CommandMessage, ResponseMessage, NotifyMessage, InvalidMessage };
 
+	MessageType getType() const;
 	QString getMessageId() const;
 	QString getClientId() const;
 	QString getCommand() const;
-	QStringList getCommandArgs() const;
-	QString getCommandArgNumber(int n) const;
+	QStringList getArgs() const;
+	int getArgsCount() const;
+	QString getArgNumber(int n) const;
 
 	// reads
 	static bool readUiMessage(const QByteArray &data, UiMessage* incomplete, qint64 *index );

@@ -1,4 +1,4 @@
-#include "rawstringutils.h"
+#include "utils/rawstringutils.h"
 
 RawStringUtils::RawStringUtils() {}
 
